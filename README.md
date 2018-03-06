@@ -1,10 +1,12 @@
 # Canvas Submission Time Scraper
 
-Canvas is kind of clunky when it comes to exporting data. Furthermore, many profs like to give grace days / hours / minutes (because they're nice people unlike me) even after submissions are due. Then, they'll have to manually mark submissions as "on-time" even though Canvas marks them late.
+(Canvas LMS](https://www.canvaslms.com.au/) is kind of clunky when it comes to exporting data. Currently, it **is cannot export student assignment submission times**. 
 
-Canvas **currently does not export student assignment submission times**. That can be annoying for classes / professors / TAs that work on a grace day system (like mine). Wouldn't it be nice to export each student's submission time as a CSV file for a given assignment?
+This is a problem if you need the each submission timetstamp to calculate the late penalty policy outside Canvas, for example on Google Sheets.
 
-This is what we do.
+This script will allow you to export each student's submission time as a CSV file for a given assignment?
+
+This script has been tested in Columbia Uni (US) and RMIT Unviersity (Australia)
 
 ## Dependencies
 
@@ -18,22 +20,13 @@ First of all, clone this repo to be able to run `canvas-panda.py`. Why did I nam
 
 #### Getting an Access Token
 
-Obtain the Canvas **access token** from your user Settings .
+Obtain the Canvas **access token** from your user account Settings section. Note that it will show the full access token once; you need to copy and save it somehwere as you won't be able to see it again later!
 
-For example, in Columbia Uni:
-
-1. Log in to courseworks2 at [https://courseworks2.columbia.edu/](https://courseworks2.columbia.edu/) and get yourself an **access token** by going to settings:
-
-![Go To Settings](./screenshots/screenshot_5.png)
-
-2. And get yourself a new access token. **Copy it down**.
-
-![Get yourself a new access token.](./screenshots/screenshot_6.png)
-
+The token is a long string, like "95952pcHw2i8gJB9AGjs5XphYS5SZmR0AXWgWuDm05Nmcqk4uL" and will give the script permission to access your course Canvas install.
 
 #### Running the Script
 
-```bash
+```
 $ python3 canvas-panda-async.py -h
 
 usage: canvas-panda-async.py [-h] [-u CANVAS_URL] [--timezone TIMEZONE]
