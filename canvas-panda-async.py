@@ -114,7 +114,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--date-format',
         type=str,
-        default = DATE_FORMAT,
+        default = 'rmit_AUS',
         choices=list(date_formats.keys()),
         help='Format of the submission date+time to be used (default: %(default)s)'
     )
