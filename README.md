@@ -1,5 +1,8 @@
 # Canvas Submission Time Scraper
 
+**DISCLAIMER:** This is a fork of [this canvas-submission-time-scraper](https://github.com/linanqiu/canvas-submission-time-scraper) repository.
+
+
 [Canvas LMS](https://www.canvaslms.com.au/) is kind of clunky when it comes to exporting data. Currently, it **is cannot export student assignment submission times**. 
 
 This is a problem if you need the each submission timetstamp to calculate the late penalty policy outside Canvas, for example on Google Sheets.
